@@ -1,0 +1,15 @@
+spring:
+  h2.console.enable: true
+  datasource:
+    url: jdbc:h2:./data/foobar;AUTO_SERVER=TRUE;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE # TODO protect against network access
+    driver-class-name: org.h2.Driver
+    platform: h2
+  data.rest.base-path: /api
+  jpa:
+    show-sql: true
+    hibernate.ddl-auto: validate
+    properties.hibernate.dialect: org.hibernate.dialect.H2Dialect
+  flyway:
+    url: jdbc:h2:./data/foobar
+    user: SA
+    password:
